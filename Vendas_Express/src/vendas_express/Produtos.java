@@ -39,8 +39,10 @@ public class Produtos {
 
     public void setValor(int Valor) {
         if (Valor == 0 ){
-            System.out.println
-        }
+            System.out.println("Seu saldo deve ser maior que 0!!");
+        } else {
+            System.out.println("Seu novo saldo é: " + this.Valor );
+            }
         this.Valor = Valor;
     }
 
