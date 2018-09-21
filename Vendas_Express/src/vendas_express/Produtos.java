@@ -4,8 +4,9 @@ public class Produtos {
     
     public int codProd;
     public String tipoProd;
-    private int Valor;
+    protected int Valor;
     public String Descrição;
+    
    
         //Metodós Acessores
         public void EstadoAtual() {
@@ -14,7 +15,7 @@ public class Produtos {
         System.out.println("Usabilidade do Produto :" + tipoProd);
         System.out.println("Valor do Produto : " + Valor);
         System.out.println("Descrição do Produto : " +Descrição);
-}
+        }
     
     public int getCodProd() {
         return codProd;
@@ -37,6 +38,9 @@ public class Produtos {
     }
 
     public void setValor(int Valor) {
+        if (Valor == 0 ){
+            System.out.println
+        }
         this.Valor = Valor;
     }
 
