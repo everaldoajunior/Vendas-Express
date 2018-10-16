@@ -16,35 +16,48 @@ public class ticket {
     private String valorTotal;
     private String tipoItem;
     private String valorItem;
+    private String itens;
     
-    private String contentTicket = 
-            "GW SISTEMAS - Teste Impressão" +
-            "Expedido em :" + criadoEm + "" +
-            " =========================== " +
-            "CNPJ : XXX.XXX.XXX-1000      " +
-            "Nº CT-e : " + nCte + "       " +
-            "                             " +
-            "Total :" + valorTotal + "    " +
-            "Item:                        " +
-            "                             " +
-            "Tipo do Item:" + tipoItem + "" +
-            "Valor do item:" + valorItem +""
-    ;
+    private static final String contentTicket
+            = "         GW SISTEMAS         \n\n"
+            + "Expedido em : ${criadoEm}      \n"
+            + "\n===========================  \n"
+            + "CNPJ : XXX.XXX.XXX-1000        \n"
+            + ""
+            + "Nº CT-e : ${nCte}              \n"
+            + "\n\n\n\n\n\n                   \n"
+            + "Total : ${valorTotal}          \n"
+            + "\n                             \n"
+            + "Item : ${itens}                \n"
+            + "                               \n"
+            + "Tipo do Item : ${tipoItem}     \n"
+            + "\n                             \n"
+            + "\nValor do item : ${valorItem} \n"
+            + "\n                             \n"
+            + "\n                             \n"
+            + "\n                             \n"
+            + "\n                             \n"
+            + "\n                             \n"
+            + "\n                             \n"
+            + "\n                             \n"
+            + "\n                             \n"
+            + " ========================== ";
 
-    public ticket(String criadoEm, String nCte, String valorTotal, String tipoItem, String valorItem) {
+    public ticket(String criadoEm, String nCte, String valorTotal, String tipoItem, String valorItem, String itens) {
         this.criadoEm = criadoEm;
         this.nCte = nCte;
         this.valorTotal = valorTotal;
         this.tipoItem = tipoItem;
         this.valorItem = valorItem;
+        this.itens = itens;
     }
-    
+
     public String getCriadoEm() {
         return criadoEm;
     }
 
     public void setCriadoEm(String criadoEm) {
-        this.criadoEm = criadoEm;
+        criadoEm = criadoEm;
     }
 
     public String getnCte() {
@@ -52,7 +65,7 @@ public class ticket {
     }
 
     public void setnCte(String nCte) {
-        this.nCte = nCte;
+        nCte = nCte;
     }
 
     public String getValorTotal() {
@@ -60,7 +73,7 @@ public class ticket {
     }
 
     public void setValorTotal(String valorTotal) {
-        this.valorTotal = valorTotal;
+        valorTotal = valorTotal;
     }
 
     public String getTipoItem() {
@@ -68,7 +81,7 @@ public class ticket {
     }
 
     public void setTipoItem(String tipoItem) {
-        this.tipoItem = tipoItem;
+        tipoItem = tipoItem;
     }
 
     public String getValorItem() {
@@ -76,15 +89,27 @@ public class ticket {
     }
 
     public void setValorItem(String valorItem) {
-        this.valorItem = valorItem;
+        valorItem = valorItem;
+    }
+
+    public String getItens() {
+        return itens;
+    }
+
+    public void setItens(String itens) {
+        itens = itens;
     }
 
     public String getContentTicket() {
-        return contentTicket;
-    }
+        String texto = contentTicket;
+        
+        texto = texto.replace("${criadoEm}", criadoEm);
+        texto = texto.replace("${nCte}", nCte);
+        texto = texto.replace("${valorTotal}", valorTotal);
+        texto = texto.replace("${tipoItem}", tipoItem);
+        texto = texto.replace("${valorItem}", valorItem);
+        texto = texto.replace("${itens}", itens);
 
-    public void setContentTicket(String contentTicket) {
-        this.contentTicket = contentTicket;
+        return texto;
     }
-    
 }
