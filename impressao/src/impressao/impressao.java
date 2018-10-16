@@ -1,5 +1,6 @@
 package impressao;
 
+import java.awt.Font;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -23,7 +24,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class impressao {
 
     public static void main(String[] args) {
-
+        
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
@@ -39,9 +40,9 @@ public class impressao {
         DocFlavor docFlavor = DocFlavor.INPUT_STREAM.AUTOSENSE;
         HashDocAttributeSet hashDocAttributeSet = new HashDocAttributeSet();
         
-            ticket t = new ticket("16/10/2018", "30.709.115/0001-10", "077740874", "29,59", "Peixe", "");
+            ticket t = new ticket("30.709.115/0001-10", "077740874", "29,59",  "Peixe Cioba", "Peixe", "31,50");
         
-        // Criação do Arquivo que irá ser Impresso
+//         Criação do Arquivo que irá ser Impresso
         try {
             OutputStream outputStream = new FileOutputStream("/home/estagio/teste.txt");
             String s = t.getContentTicket();
