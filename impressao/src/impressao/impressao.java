@@ -42,7 +42,7 @@ public class impressao {
         
             ticket t = new ticket("30.709.115/0001-10", "077740874", "29,59",  "Peixe Cioba", "Peixe", "31,50");
         
-//         Cria��o do Arquivo que ir� ser Impresso
+//         Criação do Arquivo que irá ser Impresso
         try {
             OutputStream outputStream = new FileOutputStream("/home/estagio/teste.txt");
             String s = t.getContentTicket();
@@ -56,7 +56,7 @@ public class impressao {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // Pegando arquivo que ser� impresso
+        // Pegando arquivo que será impresso
         try {
             FileInputStream fileInputStream = new FileInputStream("/home/estagio/teste.txt");
             Doc doc = new SimpleDoc(fileInputStream, docFlavor, hashDocAttributeSet);
