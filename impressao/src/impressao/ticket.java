@@ -19,7 +19,7 @@ import java.util.TimeZone;
 public class ticket {
     
     private String criadoEm = DateTimeFormatter.ofPattern("dd/MM/yyyy").format(LocalDate.now());
-    private String horaExpedicao = DateTimeFormatter.ofPattern("hh:mm").format(LocalTime.now());
+    private String horaExpedicao = DateTimeFormatter.ofPattern("HH:mm:ss").format(LocalTime.now());
     private String CNPJ;
     private String nCte;
     private String valorTotal;
@@ -31,13 +31,13 @@ public class ticket {
             = "         GW SISTEMAS         \n\n"
             + "\n                             \n"
             + "Expedido em : ${criadoEm} "
-            + "às : ${horaExpedicao}          \n"
+            + "ï¿½s : ${horaExpedicao}          \n"
             + "                               \n"
             + "\n ------------------------------ \n"
             + "                               \n"
             + "CNPJ : ${CNPJ}                 \n"
             + "                               \n"
-            + "Nº CT-e : ${nCte}              \n"
+            + "Nï¿½ CT-e : ${nCte}              \n"
             + "                               \n"
             + "\n ------------------------------ \n"
             + "\n\n\n\n\n\n                   \n"
