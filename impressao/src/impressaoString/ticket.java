@@ -10,19 +10,4 @@ package impressaoString;
  * @author estagio
  */
 public class ticket {
-    
-    private String contentTicket = 
-            "GW SISTEMAS - Teste Impressão" +
-            "Expedido em : {{criadoEm}}   " +
-            " =========================== " +
-            "CNPJ : XXX.XXX.XXX-1000      " +
-            "Nº CT-e : 000000             " +
-            "                             " +
-            "Total :{{valorTotal}}        " +
-            "Item:                        " +
-            "                             " +
-            "Tipo do Item:\nValor do item "
-    ;
-    
-    
 }
