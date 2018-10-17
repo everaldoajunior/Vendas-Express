@@ -32,17 +32,17 @@ public class impressao {
         }
 
         PrintService[] printService = PrintServiceLookup.lookupPrintServices(DocFlavor.INPUT_STREAM.AUTOSENSE, null);
-        System.out.println("Nï¿½mero de Impressoras : " + printService.length);
+        System.out.println("Número de Impressoras : " + printService.length);
 
         PrintService defaultPrinter = PrintServiceLookup.lookupDefaultPrintService();
-        System.out.println("Impressora Padrï¿½o ï¿½ : " + defaultPrinter.getName());
+        System.out.println("Impressora Padrão é : " + defaultPrinter.getName());
 
         DocFlavor docFlavor = DocFlavor.INPUT_STREAM.AUTOSENSE;
         HashDocAttributeSet hashDocAttributeSet = new HashDocAttributeSet();
         
             ticket t = new ticket("30.709.115/0001-10", "077740874", "29,59",  "Peixe Cioba", "Peixe", "31,50");
         
-//         CriaÃ§Ã£o do Arquivo que irÃ¡ ser Impresso
+//         Criação do Arquivo que irá ser Impresso
         try {
             OutputStream outputStream = new FileOutputStream("/home/estagio/teste.txt");
             String s = t.getContentTicket();
@@ -56,7 +56,7 @@ public class impressao {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // Pegando arquivo que serÃ¡ impresso
+        // Pegando arquivo que será impresso
         try {
             FileInputStream fileInputStream = new FileInputStream("/home/estagio/teste.txt");
             Doc doc = new SimpleDoc(fileInputStream, docFlavor, hashDocAttributeSet);
@@ -64,17 +64,17 @@ public class impressao {
 
             if (defaultPrinter != null) {
                 DocPrintJob docPrintJob = defaultPrinter.createPrintJob();
-                    System.out.println("Impressï¿½o Finalizada com Sucesso!!");;
+                    System.out.println("Impressão Finalizada com Sucesso!!");;
             
                 try {
-                    //Mandar impressï¿½o abaixo :
+                    //Mandar impressão abaixo :
                     docPrintJob.print(doc, printRequestAttributeSet);
                 } catch (PrintException ex) {
                     JOptionPane.showMessageDialog(null, ex);
                 }
             }
             else {
-                JOptionPane.showMessageDialog(null , "Impressï¿½o cancelada com sucesso!");
+                JOptionPane.showMessageDialog(null , "Impressão cancelada com sucesso!");
             }
         } catch (FileNotFoundException ex) {
             JOptionPane.showMessageDialog(null, ex);

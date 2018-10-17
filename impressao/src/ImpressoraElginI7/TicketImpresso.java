@@ -3,20 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package impressao;
+package ImpressoraElginI7;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Locale;
-import java.util.TimeZone;
 
 /**
  *
  * @author estagio
  */
-public class ticket {
+public class TicketImpresso {
     
     private String criadoEm = DateTimeFormatter.ofPattern("dd/MM/yyyy").format(LocalDate.now());
     private String horaExpedicao = DateTimeFormatter.ofPattern("hh:mm").format(LocalTime.now());
@@ -58,7 +55,7 @@ public class ticket {
             + "\n                             \n"
             + "============================";
 
-    public ticket (String CNPJ, String nCte, String valorTotal, String itens, String tipoItem, String valorItem) {
+    public TicketImpresso (String CNPJ, String nCte, String valorTotal, String itens, String tipoItem, String valorItem) {
 //        this.criadoEm = criadoEm;
         this.CNPJ = CNPJ;
         this.nCte = nCte;
