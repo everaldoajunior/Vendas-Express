@@ -1,0 +1,63 @@
+<div class="col-100">
+                <div class="col-50">
+                        <div class="container-lb-chave">
+                            <label>NOME</label>
+                        </div>
+                    <div class="container-lb-valor">
+                        <label>VALOR</label>
+                    </div>
+                </div>
+
+
+
+            <div class="col-100">
+                <div class="col-50">
+                    <div class="container-lb-chave">
+                        <label>VALOR FRETE:</label>
+                    </div>
+                <div class="container-lb-valor">
+                    <label>0,00</label>
+                </div>
+            </div>
+
+            <div class="col-100">
+                    <div class="col-50">
+                            <div class="container-lb-chave">
+                                <label>VALOR PESO:</label>
+                            </div>
+                    <div class="container-lb-valor">
+                        <label>0,00</label>
+                    </div>
+                </div>
+                <div class="col-100">
+                        <div class="col-50">
+                                <div class="container-lb-chave">
+                                    <label>VALOR GRIS:</label>
+                                </div>
+                        <div class="container-lb-valor">
+                            <label>0,00</label>
+                        </div>
+                    </div>
+
+                <div class="col-100">
+                        <div class="col-50">
+                            <div class="container-lb-chave">
+                                <label>VLR DESC:</label>
+                            </div>
+                        <div class="container-lb-valor">
+                            <label>0,00</label>
+                        </div>
+                    </div>
+                </div>  
+            <div class="col-100">
+                <div class="col-50-right">
+                    <div class="container-lb-chave">
+                        <label>NOME</label>
+                    </div>
+            
+                    <div class="container-lb-valor">
+                        <label>VALOR</label>
+                    </div>
+                </div>
+            </div>
+
